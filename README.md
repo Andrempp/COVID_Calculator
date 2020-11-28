@@ -1,4 +1,4 @@
-# COVID-19 in Portugal: predictability of hospitalization, ICU and respiratory-assistance needs
+#COVID-19 in Portugal: predictability of hospitalization, ICU and respiratory-assistance needs
 
 In the context of our work, the following clinical decision support system with graphical facilities was produced.
 
@@ -32,6 +32,7 @@ You can test our solution by filling the following fields of the patient profile
 
 Press "RUN QUERY", and the probabilities of the various events will be shown, with the distinction of which classifier made them.
 
+**Disclaimer**: This is a clinical decision support tool and cannot be used to make a final decision without medical advice.
 
 ---
 

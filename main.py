@@ -65,7 +65,8 @@ target_dict = {"Hosp": {"phrase": ("need hospitalization","needing"), "classifie
                }
 to_use = {"positive test": ["Hosp", "IC1", "Outcome1"], "hospitalized": ["IC2", "RespSupport","Outcome2"],
           "intensive care": ["Outcome3"]}
-
+translations = {"Hosp": "Hospitalization", "IC1": "Intensive Care", "IC2": "Intensive Care", "Outcome1": "Outcome",
+                "Outcome2": "Outcome", "Outcome3": "Outcome","RespSupport": "Respiratory Support"}
 age_mean= 48.026216
 age_std = 24.804093
 
@@ -93,7 +94,7 @@ def update_map(inp,*args):
         else: data.append(0)
     data = np.array(data).reshape(1,-1)
     #################################################
-    to_return = [html.Br(),html.B('Result:'),html.Br()]
+    to_return = [html.Br(),html.B('Result:'),html.Br(), html.Br()]
     for target in to_use[stage]:
         print("Target: ",target)
         clf1 = target_dict[target]["classifiers"][0]
@@ -111,13 +112,16 @@ def update_map(inp,*args):
         yes1, yes2 = 'will' if result1[1]>0.5 else 'won\'t', 'will' if result2[1]>0.5 else 'won\'t'
         phrase = target_dict[target]["phrase"][0]
         verb = target_dict[target]["phrase"][1]
+        to_return.append(html.B(translations[target]))
         to_return.append(html.Div('According to classifier that maximizes recall:'))
         to_return.append(html.Div('The patient ' + yes1 +" "+ phrase + ' (' + str(int(result1[1] * 100)) + '% of ' + verb +')'))
         to_return.append(html.Br(),)
         to_return.append(html.Div('According to classifier that maximizes F1-score:'))
         to_return.append(html.Div('The patient '+yes2+" "+ phrase +' ('+str(int(result2[1]*100))+'% of '+ verb+')'))
         to_return.append(html.Br())
+        to_return.append(html.Div(style={"border":"1px black solid"}))
         to_return.append(html.Br())
+    to_return.append(html.Div('Disclaimer: This is a clinical decision support tool and cannot be used to make a final decision without medical advice.'))
     return to_return
 
 ''' ===================== '''
