@@ -1,4 +1,4 @@
-# COVID-19 in Portugal: predictability of hospitalization, ICU and respiratory-assistance needs
+# Predictability of COVID-19 Hospitalizations, Intensive Care Unit Admissions, and Respiratory Assistance in Portugal
 
 In the context of our work, the following clinical decision support system with graphical facilities was produced.
 
@@ -36,6 +36,6 @@ Press "RUN QUERY", and the probabilities of the various events will be shown, wi
 
 ---
 
- Please cite: contributions currently under review, contact Rui Henriques (rmch@tecnico.ulisboa.pt) or Rafael Costa (rs.costa@fct.unl.pt) to obtain the updated reference.
+Please cite as: Patrício A, Costa RS, Henriques R. Predictability of COVID-19 Hospitalizations, Intensive Care Unit Admissions, and Respiratory Assistance in Portugal: Longitudinal Cohort Study. J Med Internet Res. 2021 Apr 28;23(4):e26075. doi: 10.2196/26075.
 
  Guidelines to access data are available upon request.
