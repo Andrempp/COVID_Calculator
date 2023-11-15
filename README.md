@@ -1,12 +1,12 @@
-# Predictability of COVID-19 Hospitalizations, Intensive Care Unit Admissions, and Respiratory Assistance in Portugal
+# Covid Calculator: a clinical decision support system
 
-In the context of our work, the following clinical decision support system with graphical facilities was produced.
+This work was developed in the context of the published research article: Predictability of COVID-19 Hospitalizations, Intensive Care Unit Admissions, and Respiratory Assistance in Portugal.
 
 ## Installation:
 
 Python 3+
 
-All dependencies defined in **requirements.txt**. You can install them by:
+All dependencies are defined in **requirements.txt**. You can install them by:
 
 ```
 $ conda config --append channels conda-forge
@@ -31,6 +31,8 @@ You can test our solution by filling the following fields of the patient profile
 * Comorbidities
 
 Press "RUN QUERY", and the probabilities of the various events will be shown, with the distinction of which classifier made them.
+
+![Covid Calculator Example](https://github.com/andreppatricio/COVIDCalculator/blob/master/covid-calculator.gif)
 
 **Disclaimer**: This is a clinical decision support tool and cannot be used to make a final decision without medical advice.
 
